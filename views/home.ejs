@@ -1,0 +1,11 @@
+<%- include("partials/header") -%>
+<h1>Hello</h1>
+<p>Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Non diam phasellus vestibulum lorem sed. Platea dictumst quisque sagittis purus sit. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Mauris in aliquam sem fringilla. Semper risus in hendrerit gravida rutrum quisque non tellus orci. Amet massa vitae tortor condimentum lacinia quis vel eros. Enim ut tellus elementum sagittis vitae. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+<!-- the below code is alternative to for loop here posts is reffered to list , post is element(i in for loop) -->
+<% blogs.forEach(function(blog){%> <%const slicedBody = blog.content.slice(0,101)%>
+<h1><%= blog.title %></h1>
+<p>
+  <%= slicedBody%>
+  <a href="http://localhost:3000/<%=blog._id%>"> ... Read More</a>
+</p>
+<%});%> <%- include("partials/footer") -%>
